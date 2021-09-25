@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/weight" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="89dp"
+        android:text="Height" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="188dp"
+        android:text="Feet" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="258dp"
+        android:layout_marginTop="185dp"
+        android:text="Inches" />
+
+    <EditText
+        android:id="@+id/txtWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="36dp"
+        android:layout_toEndOf="@+id/textView"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/txtFeet"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="194dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+
+        />
+
+    <EditText
+        android:id="@+id/txtInches"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="134dp"
+        android:layout_marginEnd="26dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-22dp"
+        android:layout_marginBottom="211dp"
+        android:background="@color/colorPrimary"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/Calculate"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/lblBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-103dp"
+        android:layout_marginBottom="235dp"
+        android:text="@string/bmivalue" />
+
+
+    <ImageView
+        android:id="@+id/imgbmi"
+        android:layout_width="325dp"
+        android:layout_height="178dp"
+        android:layout_alignTop="@+id/btnCalculate"
+        android:layout_alignEnd="@+id/txtInches"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="-1dp"
+        android:background="@drawable/maxresdefault" />
+
+</RelativeLayout>

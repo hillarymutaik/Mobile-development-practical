@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtrowid"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5sp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginBottom="5sp"
+        android:text="txt"
+        android:textSize="25sp" />
+
+
+    <TextView
+        android:id="@+id/txtbmidate"
+        android:layout_width="81dp"
+        android:layout_height="29dp"
+        android:layout_alignBottom="@+id/txtbmivalue"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="87dp"
+        android:layout_marginBottom="1dp"
+        android:text="txt" />
+
+
+    <TextView
+        android:id="@+id/txtbmivalue"
+        android:layout_width="63dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/txtrowid"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="187dp"
+        android:text="txt" />
+
+
+    <TextView
+        android:id="@+id/txtbmitype"
+        android:layout_width="106dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="267dp"
+        android:layout_marginTop="13dp"
+        android:text="txt" />
+
+
+</RelativeLayout>

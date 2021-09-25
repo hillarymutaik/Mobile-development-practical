@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="Calculate">Calculate</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="weight">Weight</string>
+    <string name="bmivalue">Your BMI</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="email">Email Address</string>
+    <string name="updateprofile">Update Profile</string>
+    <string name="username">Your Name</string>
+    <string name="emailaddress">youremail@email.com</string>
+    <string name="ViewData">View Data</string>
+    <string name="delete">Clear All</string>
+
+</resources>
