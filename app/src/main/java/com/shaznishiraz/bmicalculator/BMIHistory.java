@@ -1,11 +1,10 @@
 package com.shaznishiraz.bmicalculator;
 
 
+import android.app.Fragment;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.shaznishiraz.bmicalculator.business.*;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+
+import com.shaznishiraz.bmicalculator.business.bmidatatable;
 
 public class BMIHistory extends Fragment {
 bmidatatable bmidatatable;
@@ -105,6 +108,7 @@ public class CustomAdapter extends BaseAdapter{
             return 0;
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.O)
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             convertView = getLayoutInflater().inflate(R.layout.custom_layout,null);
