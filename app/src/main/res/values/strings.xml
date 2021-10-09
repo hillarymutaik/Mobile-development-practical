@@ -1,18 +1,29 @@
 <resources>
-    <string name="app_name">BMI Calculator</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="Calculate">Calculate</string>
-    <string name="title_activity_maps">Map</string>
-    <string name="weight">Weight</string>
-    <string name="bmivalue">Your BMI</string>
-    <string name="firstname">First Name</string>
-    <string name="lastname">Last Name</string>
-    <string name="email">Email Address</string>
-    <string name="updateprofile">Update Profile</string>
-    <string name="username">Your Name</string>
-    <string name="emailaddress">youremail@email.com</string>
-    <string name="ViewData">View Data</string>
-    <string name="delete">Clear All</string>
-
+    <string name="app_name">IntelliSOFT Consulting</string>
+    <string name="lname">Last Name</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Save</string>
+    <string name="fname">First Name</string>
+    <string name="dob">D.O.B</string>
+    <string name="gender">Gender</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_having_account">Already Having an Account?</string>
+    <string name="log_in">Log In</string>
+    <string name="not_having_account">Not Having an Account?</string>
+    <string name="sign_up">Registration Page</string>
+    <string name="logout">Logout</string>
+    <string name="patient">Patient Report</string>
+    <string name="forma">Form A</string>
+    <string name="formb">Form B</string>
+    <string name="drugs">Drugs</string>
+    <string name="dates">Dates</string>
+    <string name="ghs">GeneralHealth</string>
+    <string name="diets">Diet</string>
+    <string name="comments">Comments</string>
+    <string name="vital">Vitals Form</string>
+    <string name="height">Height(cm)</string>
+    <string name="weight">Weight(kg)</string>
+    <string name="bmi">BMI</string>
+    <string name="dt">Date</string>
 </resources>
