@@ -2,12 +2,11 @@ package com.shashank.crud;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,9 +34,9 @@ public class FormA extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forma);
 
-        date = findViewById(R.id.date);
-        gh = findViewById(R.id.gh);
-        diet = findViewById(R.id.diet);
+        date = findViewById(R.id.dob);
+//        gh = findViewById(R.id.gh);
+//        diet = findViewById(R.id.diet);
         comment = findViewById(R.id.comment);
         progressDialog = new ProgressDialog(this);
 
