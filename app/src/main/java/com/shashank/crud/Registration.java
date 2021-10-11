@@ -33,6 +33,9 @@ public class Registration extends AppCompatActivity {
     Button button;
     Boolean valid = true;
     ProgressDialog progressDialog;
+
+    Spinner sp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +46,8 @@ public class Registration extends AppCompatActivity {
         dob = findViewById(R.id.dob);
 //        gender = findViewById(R.id.gender);
         progressDialog = new ProgressDialog(this);
+
+
 
 //        //get the spinner from the xml.
 //        Spinner dropdown = findViewById(R.id.gender);

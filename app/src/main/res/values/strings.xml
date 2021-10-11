@@ -38,7 +38,7 @@
     <string name="select_date">Select Date</string>
 
     <string-array name = "gender">
-        <item></item>
+        <!-- <item></item> -->
         <item>Male</item>
         <item>Female</item>
     </string-array>
