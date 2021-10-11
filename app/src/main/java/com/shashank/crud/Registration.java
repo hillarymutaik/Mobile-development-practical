@@ -28,14 +28,13 @@ import java.util.Map;
 
 public class Registration extends AppCompatActivity {
 
-    TextView fname, lname, dob, gender;
+    TextView fname, lname, dob;
     String fName, lName, d_o_b,gend;
+
     Button button;
     Boolean valid = true;
     ProgressDialog progressDialog;
-
-    Spinner sp;
-
+    Spinner gender;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,11 +44,11 @@ public class Registration extends AppCompatActivity {
         lname = findViewById(R.id.lname);
         dob = findViewById(R.id.dob);
 //        gender = findViewById(R.id.gender);
+        gender=(Spinner)findViewById(R.id.gender);
+
         progressDialog = new ProgressDialog(this);
 
-
-
-//        //get the spinner from the xml.
+        //get the spinner from the xml.
 //        Spinner dropdown = findViewById(R.id.gender);
 ////create a list of items for the spinner.
 //        String[] items = new String[]{"","Male", "Female"};
@@ -67,7 +66,7 @@ public class Registration extends AppCompatActivity {
                 fName = fname.getText().toString();
                 lName = lname.getText().toString();
                 d_o_b = dob.getText().toString();
-//                gend = gender.getText().toString();
+                gend= gender.getSelectedItem().toString();
 
                 if(TextUtils.isEmpty(fName)){
                     fname.setError("First Name Cannot be Empty");

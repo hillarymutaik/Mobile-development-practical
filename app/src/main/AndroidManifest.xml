@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="DuplicateActivity">
-        <activity android:name="com.shashank.crud.Registration">
+        <activity android:name="com.shashank.crud.FormB">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -28,7 +28,7 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             />
-        <activity android:name="com.shashank.crud.FormB"
+        <activity android:name="com.shashank.crud.Registration"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             />

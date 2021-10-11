@@ -75,7 +75,7 @@
         android:padding="10dp"
         android:background="@xml/input"
         android:layout_marginBottom="10dp"
-        android:inputType="text"/>
+        android:inputType="date"/>
 
     <TextView
         android:id="@+id/textView5"
@@ -86,7 +86,6 @@
 
     <Spinner
         android:id="@+id/gender"
-        android:entries="@array/gender"
         android:layout_marginBottom="5sp"
         android:layout_marginLeft="120sp"
         android:layout_gravity="right"
@@ -94,8 +93,9 @@
         android:layout_marginTop="2sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/gender"
         android:layout_centerHorizontal="true"
+        android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"/>
             
     <LinearLayout
