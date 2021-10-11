@@ -26,33 +26,33 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
+public class Registration extends AppCompatActivity {
 
     TextView fname, lname, dob, gender;
-    String fName, lName, d_o_b, gend;
+    String fName, lName, d_o_b,gend;
     Button button;
     Boolean valid = true;
     ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.registration);
 
         fname = findViewById(R.id.fname);
         lname = findViewById(R.id.lname);
         dob = findViewById(R.id.dob);
-        gender = findViewById(R.id.gender);
+//        gender = findViewById(R.id.gender);
         progressDialog = new ProgressDialog(this);
 
-        //get the spinner from the xml.
-        Spinner dropdown = findViewById(R.id.spinner1);
-//create a list of items for the spinner.
-        String[] items = new String[]{"Male", "Female"};
-//create an adapter to describe how the items are displayed, adapters are used in several places in android.
-//There are multiple variations of this, but this is the basic variant.
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-//set the spinners adapter to the previously created one.
-        dropdown.setAdapter(adapter);
+//        //get the spinner from the xml.
+//        Spinner dropdown = findViewById(R.id.gender);
+////create a list of items for the spinner.
+//        String[] items = new String[]{"","Male", "Female"};
+////create an adapter to describe how the items are displayed, adapters are used in several places in android.
+////There are multiple variations of this, but this is the basic variant.
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+////set the spinners adapter to the previously created one.
+//        dropdown.setAdapter(adapter);
 
         button = findViewById(R.id.button);
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 fName = fname.getText().toString();
                 lName = lname.getText().toString();
                 d_o_b = dob.getText().toString();
-                gend = gender.getText().toString();
+//                gend = gender.getText().toString();
 
                 if(TextUtils.isEmpty(fName)){
                     fname.setError("First Name Cannot be Empty");
@@ -82,12 +82,12 @@ public class MainActivity extends AppCompatActivity {
                         }else {
                             valid = true;
 
-                            if(TextUtils.isEmpty(gend)){
-                                gender.setError("Gender Cannot be Empty");
-                                valid = false;
-                            }else {
-                                valid = true;
-                            }
+//                            if(TextUtils.isEmpty(gend)){
+//                                gender.setError("Gender Cannot be Empty");
+//                                valid = false;
+//                            }else {
+//                                valid = true;
+//                            }
                         }
 
                     }
@@ -104,13 +104,13 @@ public class MainActivity extends AppCompatActivity {
                             progressDialog.dismiss();
                             try{
                                 JSONObject jsonObject = new JSONObject(response);
-                                Toast.makeText(MainActivity.this, jsonObject.getString("message"),
+                                Toast.makeText(Registration.this, jsonObject.getString("message"),
                                         Toast.LENGTH_SHORT).show();
                                 if(jsonObject.getString("message").equals("Data Added Successfully")){
 
-                                    Intent myIntent = new Intent(MainActivity.this, Vital.class);
+                                    Intent myIntent = new Intent(Registration.this, Vital.class);
 //                                    myIntent.putExtra("key", 0); //Optional parameters
-                                    MainActivity.this.startActivity(myIntent);
+                                    Registration.this.startActivity(myIntent);
 
 //                                    Intent my = new Intent(MainActivity.this, Vital.class);
 //                                    startActivity();
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             progressDialog.hide();
-                            Toast.makeText(MainActivity.this, "Failed to Data",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Registration.this, "Failed to Data",Toast.LENGTH_SHORT).show();
                         }
                     }){
                         protected Map<String , String> getParams() throws AuthFailureError {
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                             return params;
                         }
                     };
-                    RequestHandler.getInstance(MainActivity.this).addToRequestQueue(stringRequest);
+                    RequestHandler.getInstance(Registration.this).addToRequestQueue(stringRequest);
                 }
             }
         });
