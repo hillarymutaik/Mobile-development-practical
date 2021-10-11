@@ -3,12 +3,13 @@ package com.shashank.crud;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -35,12 +36,13 @@ public class FormA extends AppCompatActivity {
         setContentView(R.layout.forma);
 
         date = findViewById(R.id.dob);
-//        gh = findViewById(R.id.gh);
-//        diet = findViewById(R.id.diet);
+       gh = findViewById(R.id.gh);
+       diet = findViewById(R.id.diet);
         comment = findViewById(R.id.comment);
         progressDialog = new ProgressDialog(this);
 
         button = findViewById(R.id.button);
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

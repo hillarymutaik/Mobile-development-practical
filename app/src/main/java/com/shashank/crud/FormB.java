@@ -2,7 +2,7 @@ package com.shashank.crud;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -35,7 +35,7 @@ public class FormB extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.formb);
 
-        date = findViewById(R.id.date);
+        date = findViewById(R.id.dob);
         gh = findViewById(R.id.gh);
         drug = findViewById(R.id.drug);
         comment = findViewById(R.id.comment);
@@ -109,7 +109,7 @@ public class FormB extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             progressDialog.hide();
-                            Toast.makeText(FormB.this, "Failed to Data",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(FormB.this, "Failed to Save Data",Toast.LENGTH_SHORT).show();
                         }
                     }){
                         protected Map<String , String> getParams() throws AuthFailureError {

@@ -1,73 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#304769"
-    android:gravity="center_vertical"
-    android:orientation="vertical"
-    android:padding="50dp"
     tools:context=".FormB">
 
-    <TextView
-        android:id="@+id/textView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:gravity="center"
-        android:text="@string/formb"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
+            android:padding="20dp">
 
+            <TextView
+                android:id="@+id/textView12"
+                android:textSize="22sp"
+                android:layout_marginBottom="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Form B"
+                android:gravity="center"
+                android:textColor="#546e7a"/>
 
-    <EditText
-        android:id="@+id/date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@android:color/white"
-        android:hint="@string/dates"
-        android:inputType="text"
-        android:padding="10dp" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="#546e7a"/>
 
-    <EditText
-        android:id="@+id/gh"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@android:color/white"
-        android:hint="@string/ghs"
-        android:inputType="text"
-        android:padding="10dp" />
+            <EditText
+                android:id="@+id/dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:padding="10dp"
+                android:background="@xml/input"
+                android:layout_marginBottom="10dp"
+                android:inputType="date"/>
 
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="General Health?"
+                android:textColor="#546e7a"/>
 
-    <EditText
-        android:id="@+id/drug"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@android:color/white"
-        android:hint="@string/drugs"
-        android:inputType="text"
-        android:padding="10dp" />
+                <RadioGroup
+                android:id="@+id/genderGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="65dp"
+                android:layout_marginRight="65dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email">
+        
+                <RadioButton
+                android:id="@+id/gh"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                
+                android:checked="true"
+                android:text="@string/good"
+                tools:targetApi="lollipop" />
+    
+            <RadioButton
+                android:id="@+id/gh"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                
+                android:text="@string/poor"
+                tools:targetApi="lollipop" />
+            </RadioGroup>
 
-    <EditText
-        android:id="@+id/comment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@android:color/white"
-        android:hint="@string/comments"
-        android:inputType="text"
-        android:padding="10dp" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Are you currently taking drugs?"
+                android:textColor="#546e7a"/>
 
-        <Button
+                <RadioGroup
+                android:id="@+id/genderGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="65dp"
+                android:layout_marginRight="65dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email">
+        
+                <RadioButton
+                    android:id="@+id/drug"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                
+                    android:checked="true"
+                    android:text="@string/yes"
+                    tools:targetApi="lollipop" />
+        
+                <RadioButton
+                    android:id="@+id/drug"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    
+                    android:text="@string/no"
+                    tools:targetApi="lollipop" />
+        
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comments"
+                android:textColor="#546e7a"/>
+
+                <EditText
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:padding="10dp"
+                android:background="@xml/input"
+                android:layout_marginBottom="10dp"
+                android:inputType="text"/>
+            
+    <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal">
+
+    <Button
+    android:id="@+id/btnButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="clear" 
+    android:layout_gravity="left"
+    android:layout_marginBottom="5sp"
+    android:layout_marginLeft="2sp"
+    android:layout_marginRight="5sp"
+    android:background="@xml/button"
+    android:layout_marginTop="0sp"/>
+
+    <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="save"
+        android:layout_marginBottom="5sp"
+        android:layout_marginLeft="5sp"
+        android:layout_gravity="right"
+        android:layout_marginRight="2sp"
         android:background="@xml/button"
-        android:textColor="#ffff"/>
-</LinearLayout>
+        android:layout_marginTop="0sp" />
+    </LinearLayout>
+ </LinearLayout>
+</ScrollView>
+</RelativeLayout>

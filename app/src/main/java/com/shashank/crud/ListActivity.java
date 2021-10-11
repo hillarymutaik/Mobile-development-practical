@@ -3,15 +3,16 @@ package com.shashank.crud;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -70,7 +71,7 @@ public class ListActivity extends AppCompatActivity {
 
     public void refresh_list(){
         listItems.clear();
-        adapter = new MyAdapter(listItems,getApplicationContext());
+//        adapter = new MyAdapter(listItems,getApplicationContext());
         recyclerView.setAdapter(adapter);
 
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -100,7 +101,7 @@ public class ListActivity extends AppCompatActivity {
                         );
                         listItems.add(item);
 
-                        adapter = new MyAdapter(listItems,getApplicationContext());
+//                        adapter = new MyAdapter(listItems,getApplicationContext());
                         recyclerView.setAdapter(adapter);
 
                     }
